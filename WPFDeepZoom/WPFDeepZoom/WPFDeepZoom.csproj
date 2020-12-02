@@ -96,33 +96,33 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AlignTool.cs" />
-    <Compile Include="FlatTool.cs" />
-    <Compile Include="FlipTool.cs" />
-    <Compile Include="GlobalVariable.cs" />
-    <Compile Include="LabelTool.cs" />
-    <Compile Include="Loading.xaml.cs">
+    <Compile Include="Tools\AlignTool.cs" />
+    <Compile Include="Tools\FlatTool.cs" />
+    <Compile Include="Tools\FlipTool.cs" />
+    <Compile Include="Models\GlobalVariable.cs" />
+    <Compile Include="Tools\LabelTool.cs" />
+    <Compile Include="Controls\Loading.xaml.cs">
       <DependentUpon>Loading.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MagnifierTool.cs" />
-    <Compile Include="NavigatorTool.cs" />
-    <Compile Include="Password.xaml.cs">
+    <Compile Include="Tools\MagnifierTool.cs" />
+    <Compile Include="Tools\NavigatorTool.cs" />
+    <Compile Include="Controls\Password.xaml.cs">
       <DependentUpon>Password.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RotateTool.cs" />
-    <Compile Include="RulerTool.cs" />
-    <Compile Include="ScanInfoTool.cs" />
-    <Compile Include="ScreenCaptureTool.cs" />
-    <Compile Include="SlideListItem.cs" />
-    <Compile Include="SlidelistTool.cs" />
-    <Compile Include="SplitScreenTool.cs" />
-    <Compile Include="TipInfo.xaml.cs">
+    <Compile Include="Tools\RotateTool.cs" />
+    <Compile Include="Tools\RulerTool.cs" />
+    <Compile Include="Tools\ScanInfoTool.cs" />
+    <Compile Include="Tools\ScreenCaptureTool.cs" />
+    <Compile Include="Models\SlideListItem.cs" />
+    <Compile Include="Tools\SlidelistTool.cs" />
+    <Compile Include="Tools\SplitScreenTool.cs" />
+    <Compile Include="Controls\TipInfo.xaml.cs">
       <DependentUpon>TipInfo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewRectInfo.cs" />
-    <Compile Include="ViewRectTool.cs" />
-    <Compile Include="ZoomTool.cs" />
-    <Page Include="Loading.xaml">
+    <Compile Include="Models\ViewRectInfo.cs" />
+    <Compile Include="Tools\ViewRectTool.cs" />
+    <Compile Include="Tools\ZoomTool.cs" />
+    <Page Include="Controls\Loading.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -138,7 +138,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Password.xaml">
+    <Page Include="Controls\Password.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -146,14 +146,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="TipInfo.xaml">
+    <Page Include="Controls\TipInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Measure.cs" />
-    <Compile Include="MeasureToolData.cs" />
+    <Compile Include="Models\Measure.cs" />
+    <Compile Include="Models\MeasureToolData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
