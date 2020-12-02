@@ -1,0 +1,107 @@
+﻿<UserControl x:Class="WPFDeepZoom.Loading"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFDeepZoom"
+             mc:Ignorable="d" 
+             x:Name="loading" Loaded="loading_Loaded">
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid Width="80" Height="80" Margin="20,0,0,0">
+            <FrameworkElement.Resources>
+                <ResourceDictionary>
+                    <DrawingBrush x:Key="brush" Stretch="None" AlignmentX="Center" AlignmentY="Top">
+                        <DrawingBrush.Drawing>
+                            <GeometryDrawing Brush="#FF000000">
+                                <GeometryDrawing.Geometry>
+                                    <EllipseGeometry RadiusX="2" RadiusY="5" />
+                                </GeometryDrawing.Geometry>
+                            </GeometryDrawing>
+                        </DrawingBrush.Drawing>
+                    </DrawingBrush>
+                </ResourceDictionary>
+            </FrameworkElement.Resources>
+            <Rectangle Name="r01" Fill="{StaticResource brush}" Opacity="0.7" RenderTransformOrigin="0.5,0.5">
+                <UIElement.RenderTransform>
+                    <RotateTransform Angle="0" />
+                </UIElement.RenderTransform>
+            </Rectangle>
+            <Rectangle Name="r02" Fill="{StaticResource brush}" Opacity="0.7" RenderTransformOrigin="0.5,0.5">
+                <UIElement.RenderTransform>
+                    <RotateTransform Angle="30" />
+                </UIElement.RenderTransform>
+            </Rectangle>
+            <Rectangle Name="r03" Fill="{StaticResource brush}" Opacity="0.7" RenderTransformOrigin="0.5,0.5">
+                <UIElement.RenderTransform>
+                    <RotateTransform Angle="60" />
+                </UIElement.RenderTransform>
+            </Rectangle>
+            <Rectangle Name="r04" Fill="{StaticResource brush}" Opacity="0.7" RenderTransformOrigin="0.5,0.5">
+                <UIElement.RenderTransform>
+                    <RotateTransform Angle="90" />
+                </UIElement.RenderTransform>
+            </Rectangle>
+            <Rectangle Name="r05" Fill="{StaticResource brush}" Opacity="0.7" RenderTransformOrigin="0.5,0.5">
+                <UIElement.RenderTransform>
+                    <RotateTransform Angle="120" />
+                </UIElement.RenderTransform>
+            </Rectangle>
+            <Rectangle Name="r06" Fill="{StaticResource brush}" Opacity="0.7" RenderTransformOrigin="0.5,0.5">
+                <UIElement.RenderTransform>
+                    <RotateTransform Angle="150" />
+                </UIElement.RenderTransform>
+            </Rectangle>
+            <Rectangle Name="r07" Fill="{StaticResource brush}" Opacity="0.7" RenderTransformOrigin="0.5,0.5">
+                <UIElement.RenderTransform>
+                    <RotateTransform Angle="180" />
+                </UIElement.RenderTransform>
+            </Rectangle>
+            <Rectangle Name="r08" Fill="{StaticResource brush}" Opacity="0.7" RenderTransformOrigin="0.5,0.5">
+                <UIElement.RenderTransform>
+                    <RotateTransform Angle="210" />
+                </UIElement.RenderTransform>
+            </Rectangle>
+            <Rectangle Name="r09" Fill="{StaticResource brush}" Opacity="0.7" RenderTransformOrigin="0.5,0.5">
+                <UIElement.RenderTransform>
+                    <RotateTransform Angle="240" />
+                </UIElement.RenderTransform>
+            </Rectangle>
+            <Rectangle Name="r10" Fill="{StaticResource brush}" Opacity="0.7" RenderTransformOrigin="0.5,0.5">
+                <UIElement.RenderTransform>
+                    <RotateTransform Angle="270" />
+                </UIElement.RenderTransform>
+            </Rectangle>
+            <Rectangle Name="r11" Fill="{StaticResource brush}" Opacity="0.7" RenderTransformOrigin="0.5,0.5">
+                <UIElement.RenderTransform>
+                    <RotateTransform Angle="300" />
+                </UIElement.RenderTransform>
+            </Rectangle>
+            <Rectangle Name="r12" Fill="{StaticResource brush}" Opacity="0.7" RenderTransformOrigin="0.5,0.5">
+                <UIElement.RenderTransform>
+                    <RotateTransform Angle="330" />
+                </UIElement.RenderTransform>
+            </Rectangle>
+            <FrameworkElement.Triggers>
+                <EventTrigger RoutedEvent="Grid.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard RepeatBehavior="Forever">
+                            <DoubleAnimation Storyboard.TargetName="r01" Storyboard.TargetProperty="Opacity" AutoReverse="True" Duration="0:0:0.08333" BeginTime="0:0:0.00000" To="0" />
+                            <DoubleAnimation Storyboard.TargetName="r02" Storyboard.TargetProperty="Opacity" AutoReverse="True" Duration="0:0:0.08333" BeginTime="0:0:0.08333" To="0" />
+                            <DoubleAnimation Storyboard.TargetName="r03" Storyboard.TargetProperty="Opacity" AutoReverse="True" Duration="0:0:0.08333" BeginTime="0:0:0.16666" To="0" />
+                            <DoubleAnimation Storyboard.TargetName="r04" Storyboard.TargetProperty="Opacity" AutoReverse="True" Duration="0:0:0.08333" BeginTime="0:0:0.24999" To="0" />
+                            <DoubleAnimation Storyboard.TargetName="r05" Storyboard.TargetProperty="Opacity" AutoReverse="True" Duration="0:0:0.08333" BeginTime="0:0:0.33332" To="0" />
+                            <DoubleAnimation Storyboard.TargetName="r06" Storyboard.TargetProperty="Opacity" AutoReverse="True" Duration="0:0:0.08333" BeginTime="0:0:0.41665" To="0" />
+                            <DoubleAnimation Storyboard.TargetName="r07" Storyboard.TargetProperty="Opacity" AutoReverse="True" Duration="0:0:0.08333" BeginTime="0:0:0.49998" To="0" />
+                            <DoubleAnimation Storyboard.TargetName="r08" Storyboard.TargetProperty="Opacity" AutoReverse="True" Duration="0:0:0.08333" BeginTime="0:0:0.58331" To="0" />
+                            <DoubleAnimation Storyboard.TargetName="r09" Storyboard.TargetProperty="Opacity" AutoReverse="True" Duration="0:0:0.08333" BeginTime="0:0:0.66664" To="0" />
+                            <DoubleAnimation Storyboard.TargetName="r10" Storyboard.TargetProperty="Opacity" AutoReverse="True" Duration="0:0:0.08333" BeginTime="0:0:0.74997" To="0" />
+                            <DoubleAnimation Storyboard.TargetName="r11" Storyboard.TargetProperty="Opacity" AutoReverse="True" Duration="0:0:0.08333" BeginTime="0:0:0.83330" To="0" />
+                            <DoubleAnimation Storyboard.TargetName="r12" Storyboard.TargetProperty="Opacity" AutoReverse="True" Duration="0:0:0.08333" BeginTime="0:0:0.91663" To="0" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </FrameworkElement.Triggers>
+        </Grid>
+        <Label Name="labelLoad" Content="正在加载，请稍候..." Height="50" VerticalContentAlignment="Center" Margin="5,0,0,0" Width="auto" FontSize="20" />
+    </StackPanel>
+</UserControl>

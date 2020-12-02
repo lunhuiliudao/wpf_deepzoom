@@ -1,0 +1,157 @@
+ZYViewer
+Slide list
+Rotation
+Distance
+Anotation
+Anotation list
+Multi-Viewer
+Snap
+Rotation
+Magnifier
+Export
+Fov Information
+Scan information
+Language
+Folder
+Refresh
+Search by name
+Auto hide
+Current folder
+Rotate slide
+Enter the minimum degree of rotation
+Grids
+ON
+OFF
+X-axis motor position
+Y-axis motor position
+Z-axis motor position
+Focus point
+Zoom in
+Zoom out
+Fit
+Previous
+Up
+Next
+Left
+Down
+Right
+Multi-window
+Drag to multi select
+Link slides
+Align slides
+Select shape
+Select color
+More colors
+Line width
+Edit annotation
+Title
+Please enter a title within 20 words
+Content
+Please enter content within 50 words
+Color
+Line width
+Save
+Cancel
+Show annotations
+Show information
+Select all
+Please open a slide first
+Software version
+Scanner SN
+Scanner model
+Camera model
+Preview camera
+Objective type
+Objective magnification
+Adaptor type
+Image format
+Image quality
+Focus interval
+¦Ìm/pixel
+Scanning magnification
+Scanning mode
+Layers
+Step
+Resolution
+Start time
+Focus time
+WB time
+Scanning time
+Please select language
+Snapshot Preview
+Show annotations
+Show scale
+Show slide thumbnail
+Show label
+Horizontal rotation
+Vertical rotation
+Switch to mouse mode
+Close
+Can not find a slide in this folder
+Failure to open the slide
+Program loading exception
+Please finish adding or editing anotations first
+Open
+Hide
+Hide information
+Are you sure to delete it?
+Notice
+OK
+Cancel
+Show information
+Rectangle
+Ellipse
+Line
+Arrow
+Polygon
+Display
+Delete
+Picture saved successfully
+"Picture saving failed, please try again"
+Switch to zone mode
+Switch to mouse mode
+Please select annotations to export first
+Reset
+Location
+Folder does not exist
+Yes
+No
+"Loading,please wait"
+Permission password
+Left distance
+Right distance
+Width
+Height
+Area
+length
+Annotation saved successfully
+"Annotation saving failed, please try again"
+Edit
+Export picture
+Folder
+Viewer
+Slide name
+Magnification
+Type
+Export format
+From
+to
+Export location
+Select a location to export
+Add slide to queue
+Import slide
+Export slide
+Status
+Delete selected slides
+Delete finished slides
+Delete all
+Start conversion
+Stop conversion
+Can not to open the slide
+Export failed
+Converting
+Stopped
+Completed
+Queuing
+Can not find a slide  in this folder
+Failure to get the annotation informations
