@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0057C828-F441-43BE-87A4-73F069254E53}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KFBIO.SlideViewer</RootNamespace>
+    <AssemblyName>KFBIO.SlideViewer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cinch.WPF">
+      <HintPath>..\Lib\Cinch.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="ExifLibrary">
+      <HintPath>..\Lib\ExifLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\Lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="KFBIO.Common">
+      <HintPath>..\Lib\KFBIO.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="KFBIO.DeepZoom">
+      <HintPath>..\Lib\KFBIO.DeepZoom.dll</HintPath>
+    </Reference>
+    <Reference Include="KFBIO.DynamicGeometry">
+      <HintPath>..\Lib\KFBIO.DynamicGeometry.dll</HintPath>
+    </Reference>
+    <Reference Include="LanguageLib">
+      <HintPath>..\Lib\LanguageLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions">
+      <HintPath>..\Lib\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickZip.IO.PIDL">
+      <HintPath>..\Lib\QuickZip.IO.PIDL.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickZip.Translation">
+      <HintPath>..\Lib\QuickZip.Translation.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickZip.UserControls">
+      <HintPath>..\Lib\QuickZip.UserControls.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickZip.UserControls.Explorer">
+      <HintPath>..\Lib\QuickZip.UserControls.Explorer.dll</HintPath>
+    </Reference>
+    <Reference Include="SqlOperator">
+      <HintPath>..\Lib\SqlOperator.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\Lib\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Controls.Layout.Toolkit">
+      <HintPath>..\Lib\System.Windows.Controls.Layout.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFToolkit">
+      <HintPath>..\Lib\WPFToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock">
+      <HintPath>..\Lib\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit">
+      <HintPath>..\Lib\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AboutWind.xaml.cs">
+      <DependentUpon>AboutWind.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdjustmentWind.xaml.cs">
+      <DependentUpon>AdjustmentWind.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AnnoListWind.xaml.cs">
+      <DependentUpon>AnnoListWind.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AnnoWind.xaml.cs">
+      <DependentUpon>AnnoWind.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CaseInfoWind.xaml.cs">
+      <DependentUpon>CaseInfoWind.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CtcList.xaml.cs">
+      <DependentUpon>CtcList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CtcViewer.xaml.cs">
+      <DependentUpon>CtcViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DllImageFuc.cs" />
+    <Compile Include="EditCaseInfoWind.xaml.cs">
+      <DependentUpon>EditCaseInfoWind.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HelpWind.xaml.cs">
+      <DependentUpon>HelpWind.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HSVWindow.xaml.cs">
+      <DependentUpon>HSVWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AnnotationBaseVo.cs" />
+    <Compile Include="Models\CopyDataStruc.cs" />
+    <Compile Include="Models\ExDirectoryModel.cs" />
+    <Compile Include="Models\ExFileModel.cs" />
+    <Compile Include="Models\ExIconExtractor.cs" />
+    <Compile Include="Models\KCommon.cs" />
+    <Compile Include="KFBIO.SlideViewer.code\CtcCsv.cs" />
+    <Compile Include="KFBIO.SlideViewer.code\CtcVo.cs" />
+    <Compile Include="KFBIO.SlideViewer.code\MemoryHelper.cs" />
+    <Compile Include="KFBIO.SlideViewer.code\MessageHelper.cs" />
+    <Compile Include="Mainpage.xaml.cs">
+      <DependentUpon>Mainpage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MessageWind.xaml.cs">
+      <DependentUpon>MessageWind.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MagicZoomTileSource1.cs" />
+    <Compile Include="Models\mRectangle.cs" />
+    <Compile Include="Models\NativeMethods.cs" />
+    <Compile Include="Models\WindowShowStyle.cs" />
+    <Compile Include="Navmap.xaml.cs">
+      <DependentUpon>Navmap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuickZip.UserControls.MVVM.ViewModel\ExExplorerViewModel.cs" />
+    <Compile Include="QuickZip.UserControls.MVVM\ExProfile.cs" />
+    <Compile Include="RotateViewer.xaml.cs">
+      <DependentUpon>RotateViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SetSysWind.xaml.cs">
+      <DependentUpon>SetSysWind.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Shazzam.Shaders\ImgfiterEffect.cs" />
+    <Compile Include="SlideInfoWind.xaml.cs">
+      <DependentUpon>SlideInfoWind.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VideoWind.xaml.cs">
+      <DependentUpon>VideoWind.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="_3DSlider.xaml.cs">
+      <DependentUpon>_3DSlider.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AboutWind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdjustmentWind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AnnoListWind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AnnoWind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CaseInfoWind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CtcList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CtcViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DockWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditCaseInfoWind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HelpWind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HSVWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ImageBrower.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Mainpage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DockWindow.xaml.cs">
+      <DependentUpon>DockWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImageBrower.xaml.cs">
+      <DependentUpon>ImageBrower.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IniFile.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MessageWind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Navmap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RotateViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SetSysWind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SlideInfoWind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="themes\customaccordion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="themes\kfbioblue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VideoWind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="_3DSlider.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Config.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\about.png" />
+    <Resource Include="images\adjust.png" />
+    <Resource Include="images\analytics.png" />
+    <Resource Include="images\bei1.png" />
+    <Resource Include="images\bei10.png" />
+    <Resource Include="images\bei101.png" />
+    <Resource Include="images\bei11.png" />
+    <Resource Include="images\bei2.png" />
+    <Resource Include="images\bei20.png" />
+    <Resource Include="images\bei201.png" />
+    <Resource Include="images\bei21.png" />
+    <Resource Include="images\bei4.png" />
+    <Resource Include="images\bei40.png" />
+    <Resource Include="images\bei401.png" />
+    <Resource Include="images\bei41.png" />
+    <Resource Include="images\bei5.png" />
+    <Resource Include="images\bei51.png" />
+    <Resource Include="images\bk_1.png" />
+    <Resource Include="images\caseinfo.png" />
+    <Resource Include="images\close.jpg" />
+    <Resource Include="images\color.png" />
+    <Resource Include="images\ctc.png" />
+    <Resource Include="images\ctcimg.png" />
+    <Resource Include="images\ctcrect.png" />
+    <Resource Include="images\dashboard.png" />
+    <Resource Include="images\downarrow.png" />
+    <Resource Include="images\edit.png" />
+    <Resource Include="images\escfull.png" />
+    <Resource Include="images\fullscreen.png" />
+    <Resource Include="images\gb.png" />
+    <Resource Include="images\head_logo.png" />
+    <Resource Include="images\help.png" />
+    <Resource Include="images\imageinfo.png" />
+    <Resource Include="images\jt.png" />
+    <Resource Include="images\jx.png" />
+    <Resource Include="images\label.png" />
+    <Resource Include="images\list.png" />
+    <Resource Include="images\list1.png" />
+    <Resource Include="images\list2.png" />
+    <Resource Include="images\list3.png" />
+    <Resource Include="images\list4.png" />
+    <Resource Include="images\list5.png" />
+    <Resource Include="images\list6.png" />
+    <Resource Include="images\list7.png" />
+    <Resource Include="images\list8.png" />
+    <Resource Include="images\load.gif" />
+    <Resource Include="images\logo.ico" />
+    <Resource Include="images\logo.png" />
+    <Resource Include="images\logo2.png" />
+    <Resource Include="images\logo3.png" />
+    <Resource Include="images\logo4.png" />
+    <Resource Include="images\logonew.ico" />
+    <Resource Include="images\magnifier.png" />
+    <Resource Include="images\mie.png" />
+    <Resource Include="images\min.png" />
+    <Resource Include="images\min2.png" />
+    <Resource Include="images\move.png" />
+    <Resource Include="images\nav.png" />
+    <Resource Include="images\newp.jpg" />
+    <Resource Include="images\newp4.jpg" />
+    <Resource Include="images\newp_en.jpg" />
+    <Resource Include="images\ok.jpg" />
+    <Resource Include="images\ok1.png" />
+    <Resource Include="images\open.png" />
+    <Resource Include="images\openfile.png" />
+    <Resource Include="images\openfile2.png" />
+    <Resource Include="images\other.png" />
+    <Resource Include="images\outimage.png" />
+    <Resource Include="images\overlay--close-1.png" />
+    <Resource Include="images\overlay--close.png" />
+    <Resource Include="images\pause.jpg" />
+    <Resource Include="images\pen.png" />
+    <Resource Include="images\pin.png" />
+    <Resource Include="images\pin_1.png" />
+    <Resource Include="images\pin_2.png" />
+    <Resource Include="images\pin_3.png" />
+    <Resource Include="images\pin_4.png" />
+    <Resource Include="images\play.jpg" />
+    <Resource Include="images\pp.png" />
+    <Resource Include="images\qt_hidd.png" />
+    <Resource Include="images\rule.png" />
+    <Resource Include="images\sc.png" />
+    <Resource Include="images\sca_1.jpg" />
+    <Resource Include="images\set.png" />
+    <Resource Include="images\set_1.png" />
+    <Resource Include="images\shape_rotate_anticlockwise.png" />
+    <Resource Include="images\shape_rotate_anticlockwise_1.png" />
+    <Resource Include="images\shape_rotate_clockwise.png" />
+    <Resource Include="images\shape_rotate_clockwise_1.png" />
+    <Resource Include="images\spin.png" />
+    <Resource Include="images\stop.jpg" />
+    <Resource Include="images\syn.png" />
+    <Resource Include="images\synchronous.png" />
+    <Resource Include="images\tab.png" />
+    <Resource Include="images\tma.png" />
+    <Resource Include="images\tmaadd.png" />
+    <Resource Include="images\tmaclear.png" />
+    <Resource Include="images\tmaline.png" />
+    <Resource Include="images\tmaout.png" />
+    <Resource Include="images\tmasb.png" />
+    <Resource Include="images\tool.png" />
+    <Resource Include="images\toparrow.png" />
+    <Resource Include="images\ty.png" />
+    <Resource Include="images\t_hidd.png" />
+    <Resource Include="images\video.png" />
+    <Resource Include="images\weiyunlogo.jpg" />
+    <Resource Include="images\weiyunlogo.png" />
+    <Resource Include="images\white.jpg" />
+    <Resource Include="images\xe.png" />
+    <Resource Include="images\xianweijing.jpg" />
+    <Resource Include="images\xn.png" />
+    <Resource Include="images\zx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\kviewericon_1_allsize.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
