@@ -44,6 +44,8 @@ namespace KFBIO.SlideViewer
 
 		private bool isopenhsl;
 
+        private string kfbName;
+
 		public MagicZoomTileSource1(int imageWidth, int imageHeight, int tileWidth, int overlap, IMAGE_INFO_STRUCT infoStruct, float zoom, MultiScaleImage msi)
 			: base(imageWidth, imageHeight, tileWidth, overlap)
 		{
@@ -55,7 +57,22 @@ namespace KFBIO.SlideViewer
 			Msi = msi;
 		}
 
-		public void SetinfoStruct(IMAGE_INFO_STRUCT infoStruct)
+        /// <summary>
+        /// 新增了kfbname文件的名称，方便测试
+        /// </summary>
+        public MagicZoomTileSource1(int imageWidth, int imageHeight, int tileWidth, int overlap, IMAGE_INFO_STRUCT infoStruct, float zoom, MultiScaleImage msi, string kfbName)
+            : base(imageWidth, imageHeight, tileWidth, overlap)
+        {
+            InfoStruct = infoStruct;
+            width = imageWidth;
+            height = imageHeight;
+            Xzoom = zoom;
+            TileWidth = tileWidth;
+            Msi = msi;
+            this.kfbName = kfbName;
+        }
+
+        public void SetinfoStruct(IMAGE_INFO_STRUCT infoStruct)
 		{
 			InfoStruct = infoStruct;
 		}
@@ -144,6 +161,14 @@ namespace KFBIO.SlideViewer
 					}
 					DllImageFuc.DeleteImageDataFunc(datas);
 					result = new MemoryStream(array);
+
+                    using (MemoryStream ms = new MemoryStream(array))
+                    {
+                        string sampleName = new FileInfo(this.kfbName).Name.Replace(".kfb", "");
+                        string dir = $"D:\\江丰测试\\{sampleName}\\{Level}\\";
+                        System.IO.Directory.CreateDirectory(dir);
+                        System.Drawing.Image.FromStream(ms).Save($"{dir}\\{posx}_{posy}.jpg");
+                    }
 				}
 				catch (Exception ex)
 				{

@@ -2410,7 +2410,7 @@ namespace KFBIO.SlideViewer
                 }
             }
         }
-
+        // 获取二维码图片
         public BitmapImage GetLable(int KfbioAddress)
         {
             IMAGE_INFO_STRUCT k = default(IMAGE_INFO_STRUCT);
@@ -2434,6 +2434,7 @@ namespace KFBIO.SlideViewer
             bitmapImage.StreamSource = streamSource;
             bitmapImage.EndInit();
             bitmapImage.Freeze();
+
             return bitmapImage;
         }
 
@@ -2494,6 +2495,13 @@ namespace KFBIO.SlideViewer
                     bitmapImage.CacheOption = BitmapCacheOption.None;
                     bitmapImage.StreamSource = streamSource;
                     bitmapImage.EndInit();
+
+                    // 保存图片
+                    using (MemoryStream ms = new MemoryStream(array))
+                    {
+                        System.Drawing.Image image = System.Drawing.Image.FromStream(ms);
+                        image.Save(@"D:\\1.jpg");
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -5838,7 +5846,8 @@ namespace KFBIO.SlideViewer
             {
                 TileSize = 256;
             }
-            msi.Source = new MagicZoomTileSource1(khiImageWidth, khiImageHeight, TileSize, 0, InfoStruct, khiScanScale, msi);
+            //msi.Source = new MagicZoomTileSource1(khiImageWidth, khiImageHeight, TileSize, 0, InfoStruct, khiScanScale, msi);
+            msi.Source = new MagicZoomTileSource1(khiImageWidth, khiImageHeight, TileSize, 0, InfoStruct, khiScanScale, msi, filename);
             if ((double)khiImageCapRes == 0.0)
             {
                 switch (khiScanScale)

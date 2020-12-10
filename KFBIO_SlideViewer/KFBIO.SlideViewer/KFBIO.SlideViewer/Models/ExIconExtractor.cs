@@ -49,7 +49,7 @@ namespace QuickZip.Converters
 			}
 			return GetBitmap(size, entry.PIDL.Ptr, entry is DirectoryInfoEx, false);
 		}
-
+        // 获取右侧列表的 文件图片
 		protected override Bitmap GetKFBInner(FileSystemInfoEx entry, string key, IconSize size)
 		{
 			Bitmap bitmap = null;
@@ -143,7 +143,9 @@ namespace QuickZip.Converters
 				throw ex;
 			}
 		}
-
+        /// <summary>
+        /// 获取患者的二维码图片
+        /// </summary>
 		public MemoryStream GetKFBLabel(string path)
 		{
 			IntPtr datas = IntPtr.Zero;

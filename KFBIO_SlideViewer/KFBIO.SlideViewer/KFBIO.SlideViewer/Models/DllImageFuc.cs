@@ -6,6 +6,18 @@ namespace KFBIO.SlideViewer
 {
 	internal class DllImageFuc
 	{
+        /// <summary>
+        /// 获取文件的头部信息
+        /// </summary>
+        /// <param name="k">文件地址</param>
+        /// <param name="khiImageHeight">图像高度</param>
+        /// <param name="khiImageWidth">图像宽度</param>
+        /// <param name="khiScanScale">扫描倍率：20还是40</param>
+        /// <param name="khiSpendTime">消耗时间</param>
+        /// <param name="khiScanTime">扫描时间</param>
+        /// <param name="khiImageCapRes"></param>
+        /// <param name="TileSize">瓦片图的大小</param>
+        /// <returns></returns>
 		public bool CkGetHeaderInfoFunc(IMAGE_INFO_STRUCT k, ref int khiImageHeight, ref int khiImageWidth, ref int khiScanScale, ref float khiSpendTime, ref double khiScanTime, ref float khiImageCapRes, ref int TileSize)
 		{
 			return GetHeaderInfoFunc(k, ref khiImageHeight, ref khiImageWidth, ref khiScanScale, ref khiSpendTime, ref khiScanTime, ref khiImageCapRes, ref TileSize);
@@ -15,32 +27,65 @@ namespace KFBIO.SlideViewer
 		{
 			return UnInitImageFileFunc(ref k);
 		}
-
+        /// <summary>
+        /// 读取kfb文件的总大小
+        /// </summary>
+        /// <param name="k">文件的地址</param>
+        /// <param name="p">kfb文件的完整路径</param>
+        /// <returns></returns>
 		public bool CkInitImageFileFunc(ref IMAGE_INFO_STRUCT k, string p)
 		{
 			return InitImageFileFunc(ref k, p);
 		}
 
+        /// <summary>
+        /// 获取二维码信息
+        /// </summary>
 		public bool CkGetLableInfoFunc(IMAGE_INFO_STRUCT k, out IntPtr datas, ref int a, ref int b, ref int c)
 		{
 			return GetLableInfoFunc(k, out datas, ref a, ref b, ref c);
 		}
 
+        /// <summary>
+        /// 删除内存数据
+        /// </summary>
+        /// <param name="datas"></param>
+        /// <returns></returns>
 		public bool CkDeleteImageDataFunc(IntPtr datas)
 		{
 			return DeleteImageDataFunc(datas);
 		}
 
+        /// <summary>
+        /// 获取瓦片图
+        /// </summary>
+        /// <param name="k">地址</param>
+        /// <param name="fScale">缩放比例</param>
+        /// <param name="nImagePosX">瓦片图的坐标：X</param>
+        /// <param name="nImagePosY">瓦片图的坐标：Y</param>
+        /// <param name="nDataLength">图片的字节长度</param>
+        /// <param name="datas">图片的byte</param>
+        /// <returns></returns>
 		public bool CkGetImageStreamFunc(ref IMAGE_INFO_STRUCT k, float fScale, int nImagePosX, int nImagePosY, ref int nDataLength, out IntPtr datas)
 		{
 			return GetImageStreamFunc(ref k, fScale, nImagePosX, nImagePosY, ref nDataLength, out datas);
 		}
-
+        /// <summary>
+        /// 获取版本信息
+        /// </summary>
+        /// <param name="k">文件的地址</param>
+        /// <param name="fScale">最大的层数</param>
+        /// <returns></returns>
 		public bool CkGetVersionInfoFunc(ref IMAGE_INFO_STRUCT k, ref float fScale)
 		{
 			return GetVersionInfoFunc(ref k, ref fScale);
 		}
 
+        /// <summary>
+        /// 获取患者的二维码和样本的缩略图
+        /// </summary>
+        /// <param name="path">kfb地址</param>
+        /// <param name="datas">地址</param>
 		public bool CkGetThumnailImagePathFunc(string path, out IntPtr datas, ref int a, ref int b, ref int c)
 		{
 			try
@@ -114,6 +159,12 @@ namespace KFBIO.SlideViewer
 		[DllImport("ImageOperationLib.dll")]
 		public static extern void GetDllVersionFunc(ref float f);
 
+        /// <summary>
+        /// 获取kfb文件的层数信息
+        /// </summary>
+        /// <param name="k">文件地址</param>
+        /// <param name="nCurLevel">当前层数</param>
+        /// <param name="nTotalLevel">总层数</param>
 		[DllImport("ImageOperationLib.dll")]
 		public static extern void GetScanLevelInfoFunc(ref IMAGE_INFO_STRUCT k, ref int nCurLevel, ref int nTotalLevel);
 

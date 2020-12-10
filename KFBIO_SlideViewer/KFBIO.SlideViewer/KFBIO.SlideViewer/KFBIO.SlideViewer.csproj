@@ -151,35 +151,35 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AboutWind.xaml.cs">
+    <Compile Include="View\AboutWind.xaml.cs">
       <DependentUpon>AboutWind.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AdjustmentWind.xaml.cs">
+    <Compile Include="View\AdjustmentWind.xaml.cs">
       <DependentUpon>AdjustmentWind.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AnnoListWind.xaml.cs">
+    <Compile Include="View\AnnoListWind.xaml.cs">
       <DependentUpon>AnnoListWind.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AnnoWind.xaml.cs">
+    <Compile Include="View\AnnoWind.xaml.cs">
       <DependentUpon>AnnoWind.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CaseInfoWind.xaml.cs">
+    <Compile Include="View\CaseInfoWind.xaml.cs">
       <DependentUpon>CaseInfoWind.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CtcList.xaml.cs">
+    <Compile Include="View\CtcList.xaml.cs">
       <DependentUpon>CtcList.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CtcViewer.xaml.cs">
+    <Compile Include="View\CtcViewer.xaml.cs">
       <DependentUpon>CtcViewer.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DllImageFuc.cs" />
-    <Compile Include="EditCaseInfoWind.xaml.cs">
+    <Compile Include="Models\DllImageFuc.cs" />
+    <Compile Include="View\EditCaseInfoWind.xaml.cs">
       <DependentUpon>EditCaseInfoWind.xaml</DependentUpon>
     </Compile>
-    <Compile Include="HelpWind.xaml.cs">
+    <Compile Include="View\HelpWind.xaml.cs">
       <DependentUpon>HelpWind.xaml</DependentUpon>
     </Compile>
-    <Compile Include="HSVWindow.xaml.cs">
+    <Compile Include="View\HSVWindow.xaml.cs">
       <DependentUpon>HSVWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\AnnotationBaseVo.cs" />
@@ -192,62 +192,62 @@
     <Compile Include="KFBIO.SlideViewer.code\CtcVo.cs" />
     <Compile Include="KFBIO.SlideViewer.code\MemoryHelper.cs" />
     <Compile Include="KFBIO.SlideViewer.code\MessageHelper.cs" />
-    <Compile Include="Mainpage.xaml.cs">
+    <Compile Include="View\Mainpage.xaml.cs">
       <DependentUpon>Mainpage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MessageWind.xaml.cs">
+    <Compile Include="View\MessageWind.xaml.cs">
       <DependentUpon>MessageWind.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\MagicZoomTileSource1.cs" />
     <Compile Include="Models\mRectangle.cs" />
     <Compile Include="Models\NativeMethods.cs" />
     <Compile Include="Models\WindowShowStyle.cs" />
-    <Compile Include="Navmap.xaml.cs">
+    <Compile Include="View\Navmap.xaml.cs">
       <DependentUpon>Navmap.xaml</DependentUpon>
     </Compile>
     <Compile Include="QuickZip.UserControls.MVVM.ViewModel\ExExplorerViewModel.cs" />
     <Compile Include="QuickZip.UserControls.MVVM\ExProfile.cs" />
-    <Compile Include="RotateViewer.xaml.cs">
+    <Compile Include="View\RotateViewer.xaml.cs">
       <DependentUpon>RotateViewer.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SetSysWind.xaml.cs">
+    <Compile Include="View\SetSysWind.xaml.cs">
       <DependentUpon>SetSysWind.xaml</DependentUpon>
     </Compile>
     <Compile Include="Shazzam.Shaders\ImgfiterEffect.cs" />
-    <Compile Include="SlideInfoWind.xaml.cs">
+    <Compile Include="View\SlideInfoWind.xaml.cs">
       <DependentUpon>SlideInfoWind.xaml</DependentUpon>
     </Compile>
-    <Compile Include="VideoWind.xaml.cs">
+    <Compile Include="View\VideoWind.xaml.cs">
       <DependentUpon>VideoWind.xaml</DependentUpon>
     </Compile>
-    <Compile Include="_3DSlider.xaml.cs">
+    <Compile Include="View\_3DSlider.xaml.cs">
       <DependentUpon>_3DSlider.xaml</DependentUpon>
     </Compile>
-    <Page Include="AboutWind.xaml">
+    <Page Include="View\AboutWind.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AdjustmentWind.xaml">
+    <Page Include="View\AdjustmentWind.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AnnoListWind.xaml">
+    <Page Include="View\AnnoListWind.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AnnoWind.xaml">
+    <Page Include="View\AnnoWind.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CaseInfoWind.xaml">
+    <Page Include="View\CaseInfoWind.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CtcList.xaml">
+    <Page Include="View\CtcList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CtcViewer.xaml">
+    <Page Include="View\CtcViewer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -255,29 +255,25 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EditCaseInfoWind.xaml">
+    <Page Include="View\EditCaseInfoWind.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="HelpWind.xaml">
+    <Page Include="View\HelpWind.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="HSVWindow.xaml">
+    <Page Include="View\HSVWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ImageBrower.xaml">
+    <Page Include="View\ImageBrower.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Mainpage.xaml">
+    <Page Include="View\Mainpage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -286,31 +282,27 @@
     <Compile Include="DockWindow.xaml.cs">
       <DependentUpon>DockWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ImageBrower.xaml.cs">
+    <Compile Include="View\ImageBrower.xaml.cs">
       <DependentUpon>ImageBrower.xaml</DependentUpon>
     </Compile>
-    <Compile Include="IniFile.cs" />
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="MessageWind.xaml">
+    <Compile Include="Models\IniFile.cs" />
+    <Page Include="View\MessageWind.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Navmap.xaml">
+    <Page Include="View\Navmap.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RotateViewer.xaml">
+    <Page Include="View\RotateViewer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SetSysWind.xaml">
+    <Page Include="View\SetSysWind.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SlideInfoWind.xaml">
+    <Page Include="View\SlideInfoWind.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -322,11 +314,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="VideoWind.xaml">
+    <Page Include="View\VideoWind.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="_3DSlider.xaml">
+    <Page Include="View\_3DSlider.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -356,6 +348,9 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Resource Include="shade\imgfiter.ps">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -439,7 +434,9 @@
     <Resource Include="images\pin_3.png" />
     <Resource Include="images\pin_4.png" />
     <Resource Include="images\play.jpg" />
-    <Resource Include="images\pp.png" />
+    <Content Include="images\pp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Resource Include="images\qt_hidd.png" />
     <Resource Include="images\rule.png" />
     <Resource Include="images\sc.png" />
@@ -468,14 +465,35 @@
     <Resource Include="images\video.png" />
     <Resource Include="images\weiyunlogo.jpg" />
     <Resource Include="images\weiyunlogo.png" />
-    <Resource Include="images\white.jpg" />
+    <Content Include="images\white.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Resource Include="images\xe.png" />
     <Resource Include="images\xianweijing.jpg" />
     <Resource Include="images\xn.png" />
     <Resource Include="images\zx.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\kviewericon_1_allsize.ico" />
+    <Content Include="images\kviewericon_1_allsize.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\KViewerIcon_2_allSize.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\KViewerIcon_4_allSize.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\KViewerIcon_5_allSize.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\KViewerIcon_5_allSize.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\pp1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
 using System;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Effects;
@@ -135,10 +136,11 @@ namespace Shazzam.Shaders
 
 		public ImgfiterEffect()
 		{
+            Uri tt = this.MakePackUri("shade/imgfiter.ps");
 			base.PixelShader = new PixelShader
 			{
-				UriSource = new Uri("/KFBIO.SlideViewer;component/shade/imgfiter.ps", UriKind.Relative)
-			};
+				UriSource = tt
+            };
 			UpdateShaderValue(InputProperty);
 			UpdateShaderValue(BrightnessProperty);
 			UpdateShaderValue(ContrastProperty);
@@ -149,5 +151,20 @@ namespace Shazzam.Shaders
 			UpdateShaderValue(InputSizeProperty);
 			UpdateShaderValue(GamaProperty);
 		}
-	}
+
+        public Uri MakePackUri(string relativeFile)
+        {
+            Assembly a = typeof(ImgfiterEffect).Assembly;
+
+            // Extract the short name.
+            string assemblyShortName = a.ToString().Split(',')[0];
+
+            string uriString = "pack://application:,,,/" +
+                assemblyShortName +
+                ";component/" +
+                relativeFile;
+
+            return new Uri(uriString);
+        }
+    }
 }

@@ -536,6 +536,10 @@ namespace KFBIO.SlideViewer
             imgThumbnail.Source = source;
         }
 
+        /// <summary>
+        /// 设置样本图片缩略图
+        /// </summary>
+        /// <param name="bitmapSource"></param>
         public void SetThumbnail(BitmapSource bitmapSource)
         {
             if (imgThumbnail.Source != null)

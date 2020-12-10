@@ -62,8 +62,9 @@ namespace KFBIO.SlideViewer
 				}
 				return true;
 			}
-			catch
+			catch(Exception e)
 			{
+                System.Windows.MessageBox.Show(e.Message);
 				MessageWind messageWind3 = new MessageWind(MessageBoxButton.OK, System.Windows.Application.Current.MainWindow, ((DockWindow)System.Windows.Application.Current.MainWindow).languageSetter.LanguageResource["Filedamage2"], ((DockWindow)System.Windows.Application.Current.MainWindow).languageSetter.LanguageResource["Prompt"], MessageBoxIcon.Exclamation, false);
 				messageWind3.ShowDialog();
 				return false;
