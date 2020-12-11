@@ -84,15 +84,6 @@
     <Reference Include="itextsharp">
       <HintPath>..\Lib\itextsharp.dll</HintPath>
     </Reference>
-    <Reference Include="KFBIO.Common">
-      <HintPath>..\Lib\KFBIO.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="KFBIO.DeepZoom">
-      <HintPath>..\Lib\KFBIO.DeepZoom.dll</HintPath>
-    </Reference>
-    <Reference Include="KFBIO.DynamicGeometry">
-      <HintPath>..\Lib\KFBIO.DynamicGeometry.dll</HintPath>
-    </Reference>
     <Reference Include="LanguageLib">
       <HintPath>..\Lib\LanguageLib.dll</HintPath>
     </Reference>
@@ -503,6 +494,12 @@
     <Content Include="images\pp1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KFBIO.DeepZoomSource\KFBIO.DeepZoomSource.csproj">
+      <Project>{74e4b803-9c8c-4a4a-91ec-1c192be9ee9d}</Project>
+      <Name>KFBIO.DeepZoomSource</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
