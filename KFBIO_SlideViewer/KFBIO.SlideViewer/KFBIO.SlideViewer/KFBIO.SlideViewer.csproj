@@ -356,6 +356,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="zh-Hans\LanguageLib.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-Hans\Xceed.Wpf.AvalonDock.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Resource Include="images\about.png" />
     <Resource Include="images\adjust.png" />
     <Resource Include="images\analytics.png" />
@@ -434,6 +440,9 @@
     <Resource Include="images\pin_3.png" />
     <Resource Include="images\pin_4.png" />
     <Resource Include="images\play.jpg" />
+    <Content Include="en-US\LanguageLib.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="images\pp.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
