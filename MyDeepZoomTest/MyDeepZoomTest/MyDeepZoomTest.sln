@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1267
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDeepZoomTest", "Src\MyDeepZoomTest\MyDeepZoomTest.csproj", "{B374B21B-6BE5-4EE6-81D2-CDE10EB06662}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KFBIO.DeepZoomSource", "Src\KFBIO.DeepZoomSource\KFBIO.DeepZoomSource.csproj", "{74E4B803-9C8C-4A4A-91EC-1C192BE9EE9D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B374B21B-6BE5-4EE6-81D2-CDE10EB06662}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B374B21B-6BE5-4EE6-81D2-CDE10EB06662}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B374B21B-6BE5-4EE6-81D2-CDE10EB06662}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B374B21B-6BE5-4EE6-81D2-CDE10EB06662}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74E4B803-9C8C-4A4A-91EC-1C192BE9EE9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74E4B803-9C8C-4A4A-91EC-1C192BE9EE9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74E4B803-9C8C-4A4A-91EC-1C192BE9EE9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74E4B803-9C8C-4A4A-91EC-1C192BE9EE9D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05444274-6B8E-4C40-B2B4-FE1D8800C7D9}
+	EndGlobalSection
+EndGlobal
