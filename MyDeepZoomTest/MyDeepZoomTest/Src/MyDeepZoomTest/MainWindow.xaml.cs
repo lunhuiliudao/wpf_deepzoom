@@ -1,18 +1,7 @@
 ﻿using KFBIO.DeepZoom;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace MyDeepZoomTest
 {
@@ -48,15 +37,15 @@ namespace MyDeepZoomTest
         /// </summary>
         private void InitMultiScaleImage()
         {
-            string imgDir = @"D:\MyTestCode\wpf_deepzoom_demo\MyDeepZoomTest\MyDeepZoomTest\Doc\Sample\7_files\";
+            string imgDir = @"D:\MyTestCode\wpf_deepzoom_demo\MyDeepZoomTest\MyDeepZoomTest\Doc\Sample\9_files\";
             this.msi = new MultiScaleImage();
-            //this.msi.Source = new MyMultiScaleTileSource(65792, 63488, 256, 0); // 9层图
-            //this.msi.Source = new MyMultiScaleTileSource(33024, 31744, 256, 0); // 8层图
-            this.msi.Source = new MyMultiScaleTileSource(16640, 15872, 256, 0, imgDir); // 7层图
-            //this.msi.Source = new MyMultiScaleTileSource(8448, 7936, 256, 0); // 6层图
-            //this.msi.Source = new MyMultiScaleTileSource(4352, 4096, 256, 0); // 5层图
-            //this.msi.Source = new MyMultiScaleTileSource(2304, 2048, 256, 0); // 4层图
-            //this.msi.Source = new MyMultiScaleTileSource(1280, 1024, 256, 0); // 3层图
+            this.msi.Source = new MyMultiScaleTileSource(65792, 63488, 256, 0, imgDir); // 9层图
+            //this.msi.Source = new MyMultiScaleTileSource(33024, 31744, 256, 0, imgDir); // 8层图
+            //this.msi.Source = new MyMultiScaleTileSource(16640, 15872, 256, 0, imgDir); // 7层图
+            //this.msi.Source = new MyMultiScaleTileSource(8448, 7936, 256, 0, imgDir); // 6层图
+            //this.msi.Source = new MyMultiScaleTileSource(4352, 4096, 256, 0, imgDir); // 5层图
+            //this.msi.Source = new MyMultiScaleTileSource(2304, 2048, 256, 0, imgDir); // 4层图
+            //this.msi.Source = new MyMultiScaleTileSource(1280, 1024, 256, 0, imgDir); // 3层图
             //this.msi.Source = new MyMultiScaleTileSource(768, 512, 256, 0, imgDir); // 2层图
             this.Bg.Children.Add(this.msi);
 
@@ -148,6 +137,17 @@ namespace MyDeepZoomTest
             base.Left = 0;
             base.Width = SystemParameters.WorkArea.Width;
             base.Height = SystemParameters.WorkArea.Height;
+        }
+
+        private void Window_PreviewKeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Escape)
+            {
+                if (System.Windows.MessageBox.Show("确认退出？", "提示", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                {
+                    this.Close();
+                }
+            }
         }
     }
 }

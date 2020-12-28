@@ -31,25 +31,29 @@ namespace MyDeepZoomTest
 
         protected override object GetTileLayers(int tileLevel, int tilePositionX, int tilePositionY)
         {
-            string imgDir = this.imgDir; // @"D:\MyTestCode\wpf_deepzoom_demo\MyDeepZoomTest\MyDeepZoomTest\Doc\Sample\2_files\";
-            if(tileLevel < 15)
-            {
-                //return null;
-            }
+            string imgDir = this.imgDir; 
             string imgPath = imgDir + $"{tileLevel}\\{tilePositionX}_{tilePositionY}.jpg";
             if (System.IO.File.Exists(imgPath))
             {
                 Bitmap b = (Bitmap)Image.FromFile(imgPath);
-
+                //b.Save("D:\\12.jpg");
                 Bitmap bmp = new Bitmap(b.Width, b.Height);
                 Graphics g = Graphics.FromImage(bmp);
-                g.DrawImage(b, 0, 0);
-                g.DrawString($"{tileLevel}\\{tilePositionX}_{tilePositionY}.jpg", new Font("宋体", 15), Brushes.Red, 0, 30);
-                g.DrawRectangle(new Pen(Brushes.Red), 0, 0, b.Width, b.Height);
+                g.DrawImage(b, 0, 0, b.Width, b.Height);
+                //g.DrawString($"{tileLevel}\\{tilePositionX}_{tilePositionY}.jpg", new Font("宋体", 15), Brushes.Red, 0, 30);
+                //g.DrawRectangle(new Pen(Brushes.Red), 0, 0, b.Width, b.Height);
 
                 MemoryStream ms = new MemoryStream();
                 bmp.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                 byte[] bytes = ms.ToArray();
+
+                //// 把 byte[] 写入文件
+                //FileStream fs = new FileStream("D:\\2.jpg", FileMode.Create);
+                //BinaryWriter bw = new BinaryWriter(fs);
+                //bw.Write(bytes);
+                //bw.Close();
+                //fs.Close();
+
                 return new MemoryStream(bytes);
             }
             else
