@@ -43,17 +43,19 @@ namespace MyDeepZoomTest
                 //g.DrawString($"{tileLevel}\\{tilePositionX}_{tilePositionY}.jpg", new Font("宋体", 15), Brushes.Red, 0, 30);
                 //g.DrawRectangle(new Pen(Brushes.Red), 0, 0, b.Width, b.Height);
 
-                MemoryStream ms = new MemoryStream();
-                bmp.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                byte[] bytes = ms.ToArray();
+                byte[] bytes;
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    bmp.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    bytes = ms.ToArray();
 
-                //// 把 byte[] 写入文件
-                //FileStream fs = new FileStream("D:\\2.jpg", FileMode.Create);
-                //BinaryWriter bw = new BinaryWriter(fs);
-                //bw.Write(bytes);
-                //bw.Close();
-                //fs.Close();
-
+                    //// 把 byte[] 写入文件
+                    //FileStream fs = new FileStream("D:\\2.jpg", FileMode.Create);
+                    //BinaryWriter bw = new BinaryWriter(fs);
+                    //bw.Write(bytes);
+                    //bw.Close();
+                    //fs.Close();
+                }
                 return new MemoryStream(bytes);
             }
             else
