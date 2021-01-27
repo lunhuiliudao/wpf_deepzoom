@@ -37,9 +37,9 @@ namespace MyDeepZoomTest
         /// </summary>
         private void InitMultiScaleImage()
         {
-            string imgDir = @"D:\MyTestCode\wpf_deepzoom_demo\MyDeepZoomTest\MyDeepZoomTest\Doc\Sample\9_files\";
             this.msi = new MultiScaleImage();
-            this.msi.Source = new MyMultiScaleTileSource(65792, 63488, 256, 0, imgDir); // 9层图
+            //string imgDir = @"D:\MyTestCode\wpf_deepzoom_demo\MyDeepZoomTest\MyDeepZoomTest\Doc\Sample\9_files\";
+            //this.msi.Source = new MyMultiScaleTileSource(65792, 63488, 256, 0, imgDir); // 9层图
             //this.msi.Source = new MyMultiScaleTileSource(33024, 31744, 256, 0, imgDir); // 8层图
             //this.msi.Source = new MyMultiScaleTileSource(16640, 15872, 256, 0, imgDir); // 7层图
             //this.msi.Source = new MyMultiScaleTileSource(8448, 7936, 256, 0, imgDir); // 6层图
@@ -47,6 +47,10 @@ namespace MyDeepZoomTest
             //this.msi.Source = new MyMultiScaleTileSource(2304, 2048, 256, 0, imgDir); // 4层图
             //this.msi.Source = new MyMultiScaleTileSource(1280, 1024, 256, 0, imgDir); // 3层图
             //this.msi.Source = new MyMultiScaleTileSource(768, 512, 256, 0, imgDir); // 2层图
+
+            string datPath = @"D:\WSITestData\DatImages\411681C03200807006.dat";
+            this.msi.Source = new DatMultiScaleTileSource(65792, 63488, 256, 0, datPath);
+
             this.Bg.Children.Add(this.msi);
 
             this.msi.MouseLeftButtonDown += Msi_MouseLeftButtonDown;

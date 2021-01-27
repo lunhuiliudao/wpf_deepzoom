@@ -31,6 +31,7 @@ namespace MyDeepZoomTest
 
         protected override object GetTileLayers(int tileLevel, int tilePositionX, int tilePositionY)
         {
+            DateTime start = DateTime.Now;
             string imgDir = this.imgDir; 
             string imgPath = imgDir + $"{tileLevel}\\{tilePositionX}_{tilePositionY}.jpg";
             if (System.IO.File.Exists(imgPath))
@@ -56,6 +57,9 @@ namespace MyDeepZoomTest
                     //bw.Close();
                     //fs.Close();
                 }
+                DateTime end = DateTime.Now;
+                Console.WriteLine($"tileLevel={tileLevel}, tilePositionX={tilePositionX}, tilePositionY={tilePositionY}, time={(end - start).TotalMilliseconds}");
+
                 return new MemoryStream(bytes);
             }
             else
