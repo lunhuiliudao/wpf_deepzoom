@@ -107,22 +107,6 @@ namespace KFBIO.SlideViewer
 			{
 				if (InfoStruct.DataFilePTR > 0)
 				{
-                    //for (int level = 9; level <= 50; level++)
-                    //{
-                    //    for (int column = 0; column < 200; column++)
-                    //    {
-                    //        for (int row = 0; row < 200; row++)
-                    //        {
-                    //            this.LoadImage(InfoStruct.DataFilePTR, level, row, column);
-                    //        }
-                    //    }
-
-                    //    GC.Collect();
-                    //    GC.Collect();
-                    //    GC.Collect();
-                    //    GC.Collect();
-                    //}
-
 					return LoadImage(InfoStruct.DataFilePTR, tileLevel, tilePositionX, tilePositionY);
 				}
 				return null;
@@ -177,16 +161,6 @@ namespace KFBIO.SlideViewer
 					}
 					DllImageFuc.DeleteImageDataFunc(datas);
 					result = new MemoryStream(array);
-                    if (array.Length > 0)
-                    {
-                        using (MemoryStream ms = new MemoryStream(array))
-                        {
-                            string sampleName = new FileInfo(this.kfbName).Name.Replace(".kfb", "");
-                            string dir = $"D:\\Ω≠∑·≤‚ ‘\\{sampleName}\\{Level}\\{posy}";
-                            System.IO.Directory.CreateDirectory(dir);
-                            System.Drawing.Image.FromStream(ms).Save($"{dir}\\{posx}.jpg");
-                        }
-                    }
 				}
 				catch (Exception ex)
 				{
